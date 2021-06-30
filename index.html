@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive HTML email</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Roboto&display=swap');
+
+        *,
+        ::before,
+        ::after{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            font-family: 'Roboto', sans-serif;
+            background-color: #b2dde6;
+            color: #642714;
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3%;
+            position: relative;
+        }
+        img{
+        max-width: 100%;
+        }
+        header{
+            width: 98%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #logo{
+            max-width: 130px;
+            margin: 3% 0 3% 3%;
+        }
+        #social{
+            margin: 3% 2% 3% 3%;
+        }
+        #social_list{
+            display: flex;
+            list-style-type:none ;
+
+        }
+        #wrapper{
+            margin: 3%;
+            background-color: #b2dde6;
+            border: 1px solid #642714;
+        }
+
+        .social__img{
+            color: #642714;
+            max-width: 2rem;
+            margin-left: 2rem;
+        }
+        #hero{
+            text-align: center;
+        }
+        #hero h1{
+            font-size: 2.5rem;
+
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 100;
+            margin-bottom: 2rem;
+        }
+        #hero h2{
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 1rem;
+
+            padding: 0.3rem 0.6rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+        .hero__title h2{
+            border: 1px solid #642714;
+        }
+        .hero__title p{
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 3rem;
+        }
+        #hero__image{
+            position: relative;
+        }
+        #hero__image img{
+            margin-top: 2rem;
+        }
+
+        #stamp{
+            position: absolute;
+                right: 10px;
+                top: -60px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .stamp__content{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center;align-items: center; */
+        }
+        .stamp__content a{
+            text-align: center;
+            list-style: none;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #642714;
+            font-size: 0.5rem;
+
+            margin-top: 0.5rem;
+            
+        }
+        .stamp__content a::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #642714;
+            margin:  auto;
+            margin-top: 0.5rem;
+            align-items: center;
+        }
+        .stamp__content a:nth-child(1){
+                margin-top: 0;
+        }
+
+        .stamp__content a:nth-last-child(1){
+            background-color: #642714;
+            margin-top: 0;
+            padding: 0;
+            padding-top: 0.5rem;
+
+            color: #b2dde6;
+            /* color: white; */
+        }
+        .stamp__content a:nth-last-child(1):hover{
+        opacity: 0.7;
+        transition: all 0.3s ease-in-out;
+
+        }
+
+        #stamp img{
+            width: 100px;
+
+        }
+
+        .hero__content-title::after{
+            content: "";
+            display: block;
+            width: 30%;
+            height: 3px;
+            background-color: #642714;
+            margin: auto;
+            margin-top: 1rem;
+            align-items: center;
+        }
+        .hero__content p{
+            font-size: 1rem;
+            padding: 0 15%;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+        .btn{
+            text-decoration: none;
+            border: 1px solid #642714;
+            padding: 0.5rem 1rem;
+            color: #642714;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn:hover{
+            background-color: #642714;
+            color: #b2dde6;
+            transition: all 0.3s ease-in-out;
+        }
+        footer{
+            text-align: center;
+            font-size: 0.8rem;
+            margin: 2rem;
+        }
+        #contact a{
+            color: #642714;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        /* Media Query */
+        @media (min-width:375px){
+            #hero h1{
+                font-size: 5rem;
+            }
+            #hero h2{
+                font-size: 1.2rem;
+            }
+            .stamp__content a{
+            font-size: 0.8rem;
+            }
+
+            #stamp{
+                position: absolute;
+            right: 40px;
+            top: -50px;
+            }
+            #stamp img{
+                width: 150px;
+
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="logo">
+                <img src="https://aryv-html-email.mdbgo.io/image/logo.png" alt="logo">
+            </div>
+            <div id="social">
+                <ul id="social_list">
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <img class="social__img" src="https://aryv-html-email.mdbgo.io/image/icon-facebook.svg" alt="facebook icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <img class="social__img" src="https://aryv-html-email.mdbgo.io/image/icon-instagram.svg" alt="instagram icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <img class="social__img" src="https://aryv-html-email.mdbgo.io/image/icon-twitter.svg" alt="twitter icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main id="hero">
+            <div class="hero__title">
+                <h1>Feel Great</h1>
+                <h2>Wellbeing Wisdom</h2>
+                <p>Successful virtual working | Shake it off with somatic movement | Therapy untangled</p>
+            </div>
+            <div id="hero__image">
+                <img src="https://aryv-html-email.mdbgo.io/image/tomatoes.png" alt="pile of tomatoes">
+                <div id="stamp">
+                    <img class="" src="https://aryv-html-email.mdbgo.io/image/crafted-stamp.png" alt="crafted guest stamp">
+                    <div class="stamp__content">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">identify your need</a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Set Goals</a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Take Action</a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="reward">Reward yourself</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__content">
+                <h2 class="hero__content-title">The Fruit of your labours</h2>
+                <p>"The best thing about setting a new goal or challenge is the sense of achievement you get when you complete it," says Adrienne. <br>
+                    "Then it's time to look back, assess and reflect. What did you most enjoy"? And what did you learn?" Research has found it can take around 66days on average for a behavior to become automatic, so be patient - and when you get there, be sure to enjoy it.
+                </p>
+                <a class="btn" href="http://" target="_blank" rel="noopener noreferrer">Start your journey</a>
+            </div>
+        </main>
+
+        <footer>
+            <address id="contact">
+                100 Mile Way <br>
+                London <br>
+                EC1C 2BJ <br>
+                <a href="mailto:contact@britrose.co.uk">contact@britrose.co.uk</a>
+            </address>
+        </footer>
+    </div>
+</body>
+</html>

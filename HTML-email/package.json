@@ -1,0 +1,11 @@
+{
+  "name": "html-email",
+  "version": "1.0.0",
+  "description": "First HTML email",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ary Vidot",
+  "license": "ISC"
+}
